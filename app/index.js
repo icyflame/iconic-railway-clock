@@ -1,7 +1,8 @@
 import document from "document";
 
 import * as simpleClock from "./simple/clock";
-import * as simpleBattery from "./simple/battery";
+
+import { battery } from "power";
 
 let txtBattery = document.getElementById("txtBattery");
 let txtDay = document.getElementById("txtDay");
@@ -17,11 +18,9 @@ function clockCallback(data) {
   txtTimeMins.text = data.minutes;
   txtTimeSecs.text = data.seconds;
   txtDate.text = data.date;
-
-  if (data.rawTime.getSeconds() == 0) {
-    let reading = simpleBattery.getReading();
-    txtBattery.text = (reading.charging ? "CHR " : "") + reading.level + "%";
-  }
 }
 
-simpleClock.initialize("seconds", clockCallback);
+/* --------- BATTERY --------- */
+battery.addEventListener("change", function (this, evt) {
+  txtBattery.text = (battery.charging ? "CHR " : "") + battery.chargeLevel + "%";
+});
