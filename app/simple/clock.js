@@ -29,7 +29,7 @@ function tickHandler(evt) {
     day: days[today.getDay()],
     hours: common_util.monoDigits(util.zeroPad(today.getHours())),
     minutes: common_util.monoDigits(util.zeroPad(today.getMinutes())),
-    seconds: common_util.monoDigits(util.zeroPad(today.getSeconds())),
+    seconds: common_util.monoDigits(util.zeroPad(today.getSeconds()-today.getSeconds()%10)),
     date: dateString,
   });
 }
