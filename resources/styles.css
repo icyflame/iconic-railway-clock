@@ -1,4 +1,4 @@
-#background {
+.screen {
   x: 0;
   y: 0;
   width: 100%;
@@ -10,11 +10,8 @@
   font-family: "System-Regular";
   font-size: 26;
   text-anchor: middle;
-  text-length: 32;
   x: 50%;
-  y: 50%-75;
-  width: 100%;
-  height: 100%;
+  y: 50%-61;
   fill: #FFFFFF;
 }
 
@@ -38,7 +35,7 @@
   x: 50%-40;
 }
 .clock-sep2 {
-  x: 50%+35;
+  x: 50%+40;
   y: 50%+15;
 }
 .clock-seconds {
@@ -70,4 +67,12 @@
 
 .divider-btm {
   y: 50%+99;
+}
+
+.divider-below-day {
+  y: 50%-40;
+}
+
+.divider-above-day {
+  y: 50%-99;
 }

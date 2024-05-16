@@ -1,12 +1,10 @@
 <svg class="screen">
-  <rect id="background" />
+  <rect class="divider divider-above-day" />
   <text id="txtDay" class="day-text">MONDAY</text>
-  <rect class="divider divider-btm" />
+  <rect class="divider divider-below-day" />
 
   <text id="txtTime" class="clock-text clock-hours">15</text>
-  <text id="txtTime" class="clock-text clock-sep1">:</text>
   <text id="txtTime" class="clock-text clock-mins">18</text>
-  <text id="txtTime" class="clock-text clock-sep2">:</text>
   <text id="txtTime" class="clock-text clock-seconds">34</text>
 
   <rect class="divider divider-top" />
