@@ -19,6 +19,7 @@ function clockCallback(data) {
   txtTimeSecs.text = data.seconds;
   txtDate.text = data.date;
 }
+simpleClock.initialize("seconds", clockCallback);
 
 /* --------- BATTERY --------- */
 battery.addEventListener("change", function (this, evt) {
