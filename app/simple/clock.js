@@ -31,5 +31,6 @@ function tickHandler(evt) {
     minutes: common_util.monoDigits(util.zeroPad(today.getMinutes())),
     seconds: common_util.monoDigits(util.zeroPad(today.getSeconds()-today.getSeconds()%10)),
     date: dateString,
+    rawTime: today,
   });
 }

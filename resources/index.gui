@@ -1,4 +1,5 @@
 <svg class="screen">
+  <text id="txtBattery" class="battery-text">CHR 76%</text>
   <rect class="divider divider-above-day" />
   <text id="txtDay" class="day-text">MONDAY</text>
   <rect class="divider divider-below-day" />

@@ -77,3 +77,14 @@
 .divider-above-day {
   y: 50%-99;
 }
+
+.battery-text {
+  font-family: "System-Regular";
+  font-size: 26;
+  text-anchor: end;
+  text-length: 10;
+  border: solid;
+  x: 96%;
+  y: 50%-120;
+  fill: #FFFFFF;
+}
