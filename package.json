@@ -1,6 +1,6 @@
 {
-  "name": "demo-clock-for-versa-2",
-  "version": "0.1.0",
+  "name": "iconic-railway-clock",
+  "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "devDependencies": {
@@ -10,7 +10,7 @@
   "fitbit": {
     "appUUID": "8ca409e2-01ba-4fe1-b9fb-ce5675e56b03",
     "appType": "clockface",
-    "appDisplayName": "Demo Clock For Versa 2",
+    "appDisplayName": "Iconic Railway Clock",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [],
