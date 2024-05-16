@@ -7,36 +7,51 @@
 }
 
 .day-text {
-  font-family: Seville;
+  font-family: "System-Regular";
   font-size: 26;
   text-anchor: middle;
   text-length: 32;
   x: 50%;
-  y: 50%-100;
+  y: 50%-75;
   width: 100%;
   height: 100%;
   fill: #FFFFFF;
 }
 
 .clock-text {
-  /* font-size: 105; */
+  font-family: "System-Light";
   font-size: 75;
   text-anchor: start;
-  text-length: 10;
-  x: 5%;
-  y: 50%-25;
-  width: 100%;
-  height: 100%;
   fill: #FA1E43;
+  y: 50%+25;
+}
+
+.clock-hours {
+  x: 50%-135;
+
+}
+.clock-sep1 {
+  x: 50%-60;
+  y: 50%+15;
+}
+.clock-mins {
+  x: 50%-40;
+}
+.clock-sep2 {
+  x: 50%+35;
+  y: 50%+15;
+}
+.clock-seconds {
+  x: 50%+55;
 }
 
 .date-text {
-  font-family: Seville;
+  font-family: "System-Regular";
   font-size: 26;
   text-anchor: middle;
   text-length: 32;
   x: 50%;
-  y: 50%+39;
+  y: 50%+78;
   width: 100%;
   height: 100%;
   fill: #FFFFFF;
@@ -50,9 +65,9 @@
 }
 
 .divider-top {
-  y: 50%;
+  y: 50%+40;
 }
 
 .divider-btm {
-  y: 50%+59;
+  y: 50%+99;
 }
