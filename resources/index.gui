@@ -3,9 +3,9 @@
   <text id="txtDay" class="day-text">MONDAY</text>
   <rect class="divider divider-below-day" />
 
-  <text id="txtTime" class="clock-text clock-hours">15</text>
-  <text id="txtTime" class="clock-text clock-mins">18</text>
-  <text id="txtTime" class="clock-text clock-seconds">34</text>
+  <text id="txtTimeHours" class="clock-text clock-hours">15</text>
+  <text id="txtTimeMins" class="clock-text clock-mins">18</text>
+  <text id="txtTimeSecs" class="clock-text clock-seconds">34</text>
 
   <rect class="divider divider-top" />
   <text id="txtDate" class="date-text">2024-05-16</text>
