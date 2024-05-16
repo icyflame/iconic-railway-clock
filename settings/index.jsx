@@ -7,7 +7,7 @@ registerSettingsPage(({ settings }) => (
         </Text>
       }
     >
-      <Text>Hello world!</Text>
+      <Text>There are no configurable settings right now.</Text>
     </Section>
   </Page>
 ));
