@@ -5,7 +5,7 @@
 import clock from "clock";
 import { preferences } from "user-settings";
 
-import { days } from "./locales/en.js";
+import { days, shortDays } from "./locales/en.js";
 import * as util from "./utils";
 import * as common_util from "../../common/util";
 
@@ -24,13 +24,16 @@ function tickHandler(evt) {
   let month = util.zeroPad(today.getMonth() + 1);
   let dayNumber = util.zeroPad(today.getDate());
   let dateString = `${year}-${month}-${dayNumber}`;
+  let shortDateString = `${month}-${dayNumber}`;
 
   clockCallback({
     day: days[today.getDay()],
+    shortDay: shortDays[today.getDay()],
     hours: common_util.monoDigits(util.zeroPad(today.getHours())),
     minutes: common_util.monoDigits(util.zeroPad(today.getMinutes())),
     seconds: common_util.monoDigits(util.zeroPad(today.getSeconds()-today.getSeconds()%10)),
     date: dateString,
+    shortDate: shortDateString,
     rawTime: today,
   });
 }
