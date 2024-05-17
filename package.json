@@ -1,7 +1,7 @@
 {
   "name": "iconic-railway-clock",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "devDependencies": {
     "@fitbit/sdk": "~4.3.2",
@@ -13,9 +13,7 @@
     "appDisplayName": "Iconic Railway Clock",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
-    "requestedPermissions": [
-      "access_aod"
-    ],
+    "requestedPermissions": [],
     "buildTargets": [
       "higgs",
       "meson",
