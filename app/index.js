@@ -28,14 +28,18 @@ function clockCallback(data) {
 simpleClock.initialize("seconds", clockCallback);
 
 /* --------- BATTERY --------- */
+import { me as device } from "device";
 import { battery } from "power";
-battery.addEventListener("change", function (this, evt) {
-  if (aodActive) {
-    txtBattery.text = "";
-    return;
-  }
-  txtBattery.text = (battery.charging ? "CHR " : "") + battery.chargeLevel + "%";
-});
+
+if (device.modelName != "Ionic") {
+  battery.addEventListener("change", function (this, evt) {
+    if (aodActive) {
+      txtBattery.text = "";
+      return;
+    }
+    txtBattery.text = (battery.charging ? "CHR " : "") + battery.chargeLevel + "%";
+  });
+}
 
 /* ---------- ALWAYS-ON DISPLAY ---------- */
 
