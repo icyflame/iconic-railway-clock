@@ -4,7 +4,7 @@
 A minimalist and opinionated FitBit clockface supporting SDK 4 devices
 #+end_quote
 
-[[file:screenshots/Versa-2/Screenshot 2024-05-16 at 20.12.03.png]]
+[[file:screenshots/Versa-2/1.png]]
 
 *Note:* This clock face does not support Always-On Display at this point.
 
