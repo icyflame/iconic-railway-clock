@@ -18,15 +18,17 @@ export function initialize(granularity, callback) {
 }
 
 function tickHandler(evt) {
-  let today = evt.date;
+  clockCallback(calculateDataFromDate(evt.date));
+}
 
+function calculateDataFromDate(today) {
   let year = today.getFullYear();
   let month = util.zeroPad(today.getMonth() + 1);
   let dayNumber = util.zeroPad(today.getDate());
   let dateString = `${year}-${month}-${dayNumber}`;
   let shortDateString = `${month}-${dayNumber}`;
 
-  clockCallback({
+  return {
     day: days[today.getDay()],
     shortDay: shortDays[today.getDay()],
     hours: common_util.monoDigits(util.zeroPad(today.getHours())),
@@ -35,5 +37,5 @@ function tickHandler(evt) {
     date: dateString,
     shortDate: shortDateString,
     rawTime: today,
-  });
+  }
 }
