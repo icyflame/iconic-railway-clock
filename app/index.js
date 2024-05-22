@@ -9,20 +9,24 @@ let txtTimeMins = document.getElementById("txtTimeMins");
 let txtTimeSecs = document.getElementById("txtTimeSecs");
 let txtDate = document.getElementById("txtDate");
 let aodActive = false;
+let latestData = {};
 
 /* --------- CLOCK ---------- */
 function clockCallback(data) {
   if (aodActive) {
     txtDay.text = data.shortDay;
     txtDate.text = data.shortDate;
+    txtTimeSecs.text = "00";
   } else {
     txtDay.text = data.day;
     txtDate.text = data.date;
+    txtTimeSecs.text = data.seconds;
   }
 
   txtTimeHours.text = data.hours;
   txtTimeMins.text = data.minutes;
-  txtTimeSecs.text = data.seconds;
+
+  latestData = data;
 }
 
 simpleClock.initialize("seconds", clockCallback);
@@ -50,7 +54,7 @@ import { me } from "appbit";
 import { display } from "display";
 if (display.aodAvailable && me.permissions.granted("access_aod")) {
   display.aodAllowed = true;
-  display.addEventListener("change", () => {
+  display.addEventListener("change", (this, evt) => {
     if (display.aodActive) {
       aodActive = true;
       clock.granularity = "minutes";
@@ -58,5 +62,7 @@ if (display.aodAvailable && me.permissions.granted("access_aod")) {
       aodActive = false;
       clock.granularity = "seconds";
     }
+
+    clockCallback(latestData);
   });
 }
